@@ -1,0 +1,91 @@
+html{
+    scroll-behavior:smooth;
+}
+
+/* BIOGRAFIA */
+
+#biografia::before,
+#biografia::after{
+    content:"";
+    display:block;
+
+    width:min(60%,600px);
+    height:1px;
+
+    margin:80px auto 0;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        #444,
+        transparent
+    );
+}
+
+.section_biografia{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    margin-top:30px;
+}
+
+.biografia{
+    flex:1;
+
+    padding:25px;
+
+    background:#1f1f1f;
+    border-radius:16px;
+}
+
+.foto_biografia{
+    display:block;
+
+    width:100%;
+    max-width:400px;
+    height:auto;
+
+    border-radius:16px;
+}
+
+/* TABLET */
+
+@media (max-width:992px){
+
+    .section_biografia{
+        gap:25px;
+    }
+
+    .foto_biografia{
+        max-width:320px;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    .section_biografia{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .biografia{
+        width:100%;
+        padding:20px;
+    }
+
+    .foto_biografia{
+        width:100%;
+        max-width:280px;
+        margin:0 auto;
+    }
+
+    #biografia::before,
+    #biografia::after{
+        width:85%;
+        margin:50px auto 0;
+    }
+
+}

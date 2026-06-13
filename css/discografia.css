@@ -1,0 +1,91 @@
+/* DISCOGRAFIA */
+
+.discografia-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.album{
+    display:block;
+
+    color:#EAEAEA;
+    text-decoration:none;
+
+    transition:
+        transform .3s ease,
+        color .3s ease;
+}
+
+.album img{
+    display:block;
+
+    width:100%;
+    height:auto;
+
+    border-radius:16px;
+
+    transition:
+        transform .3s ease,
+        opacity .3s ease;
+}
+
+.album h3{
+    margin-top:15px;
+
+    font-family:'Montserrat',sans-serif;
+    font-size:1.1rem;
+}
+
+.album p{
+    margin-top:5px;
+
+    color:#888;
+    font-size:.95rem;
+}
+
+.album:hover{
+    transform:translateY(-5px);
+}
+
+.album:hover img{
+    transform:scale(1.02);
+}
+
+.album:hover h3{
+    color:#F05454;
+}
+
+/* TABLET */
+
+@media (max-width:992px){
+
+    .discografia-grid{
+        gap:25px;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    .discografia-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .album{
+        max-width:400px;
+        margin:0 auto;
+    }
+
+    .album h3{
+        font-size:1rem;
+    }
+
+    .album p{
+        font-size:.9rem;
+    }
+
+}
